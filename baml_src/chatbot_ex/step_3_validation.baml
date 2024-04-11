@@ -25,11 +25,11 @@ impl<llm, GetNextQuestion> v1 {
 
     Input:
     ```
-    {// Remember the input to this function is the current information gathered from the user //}
+
     {#input}
     ```
 
-    Output JSON:{// JSON works better than format here.//}
+    Output JSON:
     {#print_type(output)}
 
     JSON: 

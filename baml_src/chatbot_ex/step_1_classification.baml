@@ -11,10 +11,7 @@ function ClassifyIntent{
     default_impl simple
 }
 
-// Now we implement the function, using an llm.
 impl<llm, ClassifyIntent> simple {
-  // This is the name of the client, which is used to execute this impl.
-  // See ./clients.baml file for more details.
   client Main
 
   prompt #"
@@ -22,16 +19,14 @@ impl<llm, ClassifyIntent> simple {
 
     Question:
     ```
-    {#input.query}{// you can refer to the query value in the prompt here//}
+    {#input.query}
     ```
 
-    {#print_enum(Intent)}{// we use printers to print out each enum value automatically. //}
+    {#print_enum(Intent)}
 
-    Output JSON: {#print_type(output)}{// we use printers to print out the output type automatically. //}
+    Output JSON: {#print_type(output)}
 
     JSON:
   "#
 
-  // Note, even though an LLM returns a string, we parse it into our array of Intents
-  // automatically.
 }

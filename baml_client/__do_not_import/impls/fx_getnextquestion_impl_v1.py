@@ -28,6 +28,7 @@ Given the partial requirements, are the requirements complete?
 
 Input:
 ```
+
 {arg}
 ```
 
